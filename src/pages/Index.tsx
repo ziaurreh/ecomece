@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ShoppingBag, Star, Truck, Shield, Headphones } from 'lucide-react';
+import { ShoppingBag, Star } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { HeroSection } from '@/components/HeroSection';
 import { useProductsStore } from '@/store/products';
 import { useCartStore } from '@/store/cart';
 import { useAuthStore } from '@/store/auth';
@@ -41,34 +41,7 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary/5 via-background to-secondary/5 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-4xl mx-auto">
-            <Badge className="mb-4" variant="secondary">
-              ✨ Welcome to the Future of Shopping
-            </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Discover Amazing Products at Unbeatable Prices
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Shop the latest trends, find unique items, and enjoy a seamless shopping experience with fast delivery and excellent customer service.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/products">
-                <Button size="lg" className="group">
-                  Shop Now
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </Link>
-              <Link to="/auth?mode=signup">
-                <Button size="lg" variant="outline">
-                  Create Account
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection />
 
       {/* Featured Products */}
       <section className="py-16">

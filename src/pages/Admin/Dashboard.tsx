@@ -9,7 +9,8 @@ import {
   Plus,
   Eye,
   Edit,
-  Trash2 
+  Trash2,
+  Image
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -252,11 +253,25 @@ export default function AdminDashboard() {
           <Card className="hover:shadow-lg transition-shadow cursor-pointer">
             <CardHeader>
               <CardTitle className="flex items-center">
-                <Users className="w-5 h-5 mr-2" />
+                <Package className="w-5 h-5 mr-2" />
                 Manage Categories
               </CardTitle>
               <CardDescription>
                 Organize products with categories
+              </CardDescription>
+            </CardHeader>
+          </Card>
+        </Link>
+
+        <Link to="/admin/hero-sections">
+          <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+            <CardHeader>
+              <CardTitle className="flex items-center">
+                <Image className="w-5 h-5 mr-2" />
+                Hero Sections
+              </CardTitle>
+              <CardDescription>
+                Manage dynamic homepage hero sections
               </CardDescription>
             </CardHeader>
           </Card>
